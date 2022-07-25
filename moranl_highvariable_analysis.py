@@ -72,7 +72,7 @@ def moranl_analysis(inFile, outFile):
     genes = adata.uns["moranI"].head(2000).index.values
     adata = adata[:, adata.var.index.isin(genes)]
  #adata.write("/jdfssz2/ST_BIOINTEL/P20Z10200N0039/06.user/liuxing2/project/clinical/mouse_EMT6/cell2loc/results/MergeRef/cell2location_map/merge_human_homology_sp.h5ad")
-    adata.write(outFile)
+    adata.write(outFile) #保存前2000个高可变
 
 if __name__ == "__main__":
     main()
